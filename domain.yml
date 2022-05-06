@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - interrupt
+  # explain... all uppercase,
+  - q1_ans 
+  - q2_ans
+  - q3_ans
+  - q4_ans
+  - q5_ans
+  - q6_ans
+  - q7_ans
+  - q8_ans
+  - q9_ans
+  - q10_ans
+  - q11_ans
+  - q12_ans
+  - q13_ans
+  - q14_ans
+  - continue_
+  - stop_
+#slots:
+#  q1:
+ #   type: text
+#    auto_fill: False
+ # q2:
+ #   type: text
+ #   auto_fill: False
+ # q3:
+  #q4:
+  #q5:
+ # q6:
+ # q7:
+ # q8:
+ # q9:
+ # q10:
+ # q11:
+ # q12:
+ # q13:
+  #q14:
+  
+
+responses:
+
+  utter_greet:
+  - text: "Hey! I am Rasa, a chatbot. We are having this conversation because we really want to know how our users feel about our game so that we can improve it."
+  utter_greet1:
+  - text: "We will only ask you few questions. Feel free to continue or stop, and you will get some reward. Will you help us, please? (please answer with 'continue' or 'stop')"
+  utter_greet2:
+  - text: "We are so happy to hear that!"
+  - text: "That's wonderful!"
+  - text: "Oh! I see."
+  utter_again:
+  - text: "Hey again! May we continue with the game exprience questionnaire, it means a lot to us. Of course! It's all voluntary, say continue to proceed or stop to refuse"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Thank you for listening, see you next time"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_introduction:
+  - text: "Tell us how you feel about the following expression using: 'not at all', 'slightly', 'moderately', 'fairly' or 'extremely' (from 0 to 4). "
+  
+  utter_start:
+  - text: "Let's start with the first one."
+
+  utter_q1:
+  - text: "I found it impressive"
+
+  utter_q2:
+  - text: "I felt challenged"
+
+  utter_q3:
+  - text: "I felt good"
+
+  utter_q4:
+  - text: "I had to put a lot of effort into it"
+
+  utter_q5:
+  - text: "I felt irritable"
+
+  utter_q6:
+  - text: "I felt bored"
+
+  utter_q7:
+  - text: "I felt wonderful"
+
+  utter_q8:
+  - text: "I forgot everything around me"
+
+  utter_q9:
+  - text: "I felt content"
+
+  utter_q10:
+  - text: "I found it tiresome"
+
+  utter_q11:
+  - text: "I felt skilfull"
+
+  utter_q12:
+  - text: "I felt completly absorbed"
+
+  utter_q13:
+  - text: "I felt successful"
+
+  utter_q14:
+  - text: "I was interested in the game's story"
+
+  utter_sorrytohear:
+  - text: "Oh..We are so sorry to hear that. Thanks anyways, we'll see you later! Enjoy the game!"
+  - text: "It's okay, we wish you the best luck! See you later!"
+  - text: "Thanks a lot for helping us to keep improving the game! See you later!"
+  utter_end:
+  - text: "Thank you so much for answering all the questions!"
+  - text: "Thank you so much for helping us improve! We really apreciate it!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

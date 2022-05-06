@@ -1,0 +1,204 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say 'Thank you for listening, see you next time' anytime the user interrup
+  steps:
+  - intent: interrup
+  - action: utter_goodbye
+
+- rule: intro
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_greet1
+- rule: restore
+  steps:
+  - intent: restore_
+  - action: utter_again
+
+#skip this part, add more examples to continue_, combine with affirm, rules names..,timeout -> stop intent
+#+option to intent: dont know what to answer, skip this question,
+#explain why use rules instead of stories. 
+#find a ways to use slots instead of differents intents.
+#empezar con la memoria,plataforma conversacionales
+#intro rasa. explicar nlu != nlg, 
+#diagrama de flujo de maquina de estado
+#diagrama de unity-rasa
+#
+- rule: continue chat
+  steps:
+    - intent: continue_
+    - action: utter_greet2
+    - action: utter_start
+    - action: utter_introduction
+    - action: utter_q1
+
+- rule: stop chat
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+
+- rule: q1 yes 
+  steps:
+    - intent: q1_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q2
+- rule: q1 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q2 yes
+  steps:
+    - intent: q2_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q3
+- rule: q2 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q3 yes
+  steps:
+    - intent: q3_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q4
+- rule: q3 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q4 yes
+  steps:
+    - intent: q4_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q5
+- rule: q4 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q5 yes
+  steps:
+    - intent: q5_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q6
+- rule: q5 no
+  steps:
+    - intent: stop_ 
+    - action: utter_sorrytohear
+
+- rule: q6 yes
+  steps:
+    - intent: q6_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q7
+- rule: q6 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q7 yes
+  steps:
+    - intent: q7_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q8
+- rule: q7 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q8 yes
+  steps:
+    - intent: q8_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q9
+- rule: q8 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q9 yes
+  steps:
+    - intent: q9_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q10
+- rule: q9 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q10 yes
+  steps:
+    - intent: q10_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q11
+- rule: q10 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q11 yes
+  steps:
+    - intent: q11_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q12
+- rule: q11 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q12 yes
+  steps:
+    - intent: q12_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q13
+- rule: q12 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q13 yes
+  steps:
+    - intent: q13_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_q14
+- rule: q13 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+- rule: q14 yes
+  steps:
+    - intent: q14_ans
+    - action: utter_greet2
+    - action: utter_introduction
+    - action: utter_end
+- rule: q14 no
+  steps:
+    - intent: stop_
+    - action: utter_sorrytohear
+
+
+
+
+
+
+
+
+
+
+
+

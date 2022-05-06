@@ -1,0 +1,142 @@
+- story: continue
+  steps:
+    - intent: continue_
+    - action: 
+- story: q1 true
+  steps:
+  - intent: q1_ans
+  - action: utter_q2
+
+- story: q1 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q2 true
+  steps:
+  - intent: q2_ans
+  - action: utter_q3
+
+- story: q2 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q3 true
+  steps:
+  - intent: q3_ans
+  - action: utter_q4
+
+- story: q3 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+- story: q4 true
+  steps:
+  - intent: q4_ans
+  - action: utter_q5
+
+- story: q4 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+- story: q5 true
+  steps:
+  - intent: q5_ans
+  - action: utter_q6
+
+- story: q5 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q6 true
+  steps:
+  - intent: q6_ans
+  - action: utter_q7
+
+- story: q6 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+- story: q7 true
+  steps:
+  - intent: q7_ans
+  - action: utter_q8
+
+- story: q7 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q8 true
+  steps:
+  - intent: q8_ans
+  - action: utter_q9
+
+- story: q8 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q9 true
+  steps:
+  - intent: q9_ans
+  - action: utter_q10
+
+- story: q9 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+
+- story: q10 true
+  steps:
+  - intent: q10_ans
+  - action: utter_q11
+
+- story: q10 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q11 true
+  steps:
+  - intent: q11_ans
+  - action: utter_q12
+
+- story: q11 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+
+- story: q12 true
+  steps:
+  - intent: q12_ans
+  - action: utter_q13
+
+- story: q12 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q13 true
+  steps:
+  - intent: q13_ans
+  - action: utter_q14
+
+- story: q13 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye
+
+- story: q14 true
+  steps:
+  - intent: q14_ans
+  - action: utter_goodbye
+
+- story: q14 false
+  steps:
+  - intent: interrupt
+  - action: utter_goodbye

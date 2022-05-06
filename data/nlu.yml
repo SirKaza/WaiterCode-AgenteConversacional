@@ -1,0 +1,255 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - okay
+    - ok
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: interrupt
+  examples: |
+    - quit
+    - stop this conversation
+    - want to finish
+    - don't want to continue
+- intent: q1_ans
+  examples: |
+    - q1 not at all
+    - q1 slightly
+    - q1 moderately
+    - q1 fairly
+    - q1 extremely
+  
+- intent: q2_ans
+  examples: |
+    - q2 not at all
+    - q2 slightly
+    - q2 moderately
+    - q2 fairly
+    - q2 extremely
+
+- intent: q3_ans
+  examples: |
+    - q3 not at all
+    - q3 slightly
+    - q3 moderately
+    - q3 fairly
+    - q3 extremely
+  
+- intent: q4_ans
+  examples: |
+    - q4 not at all
+    - q4 slightly
+    - q4 moderately
+    - q4 fairly
+    - q4 extremely
+  
+- intent: q5_ans
+  examples: |
+    - q5 not at all
+    - q5 slightly
+    - q5 moderately
+    - q5 fairly
+    - q5 extremely
+  
+
+- intent: q6_ans
+  examples: |
+    - q6 not at all
+    - q6 slightly
+    - q6 moderately
+    - q6 fairly
+    - q6 extremely
+  
+
+- intent: q7_ans
+  examples: |
+    - q7 not at all
+    - q7 slightly
+    - q7 moderately
+    - q7 fairly
+    - q7 extremely
+  
+
+- intent: q8_ans
+  examples: |
+    - q8 not at all
+    - q8 slightly
+    - q8 moderately
+    - q8 fairly
+    - q8 extremely
+  
+
+
+- intent: q9_ans
+  examples: |
+    - q9 not at all
+    - q9 slightly
+    - q9 moderately
+    - q9 fairly
+    - q9 extremely
+  
+
+
+- intent: q10_ans
+  examples: |
+    - q10 not at all
+    - q10 slightly
+    - q10 moderately
+    - q10 fairly
+    - q10 extremely
+  
+
+
+- intent: q11_ans
+  examples: |
+    - q11 not at all
+    - q11 slightly
+    - q11 moderately
+    - q11 fairly
+    - q11 extremely
+  
+
+
+- intent: q12_ans
+  examples: |
+    - q12 not at all
+    - q12 slightly
+    - q12 moderately
+    - q12 fairly
+    - q12 extremely
+  
+
+
+- intent: q13_ans
+  examples: |
+    - q13 not at all
+    - q13 slightly
+    - q13 moderately
+    - q13 fairly
+    - q13 extremely
+  
+
+
+- intent: q14_ans
+  examples: |
+    - q14 not at all
+    - q14 slightly
+    - q14 moderately
+    - q14 fairly
+    - q14 extremely
+  
+
+- intent: continue_
+  examples: |
+    - continue
+- intent: stop_
+  examples: |
+    - stop
+  
+
+- intent: restore_
+  examples: |
+    - restore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
