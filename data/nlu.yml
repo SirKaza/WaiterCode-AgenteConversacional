@@ -40,6 +40,7 @@ nlu:
     - correct
     - okay
     - ok
+    - continue
 
 - intent: deny
   examples: |
@@ -98,143 +99,139 @@ nlu:
     - stop this conversation
     - want to finish
     - don't want to continue
-- intent: q1_ans
+    - stop
+- intent: Q1_ANS
   examples: |
     - q1 not at all
     - q1 slightly
     - q1 moderately
     - q1 fairly
     - q1 extremely
-  
-- intent: q2_ans
+    - q1 skip
+- intent: Q2_ANS
   examples: |
     - q2 not at all
     - q2 slightly
     - q2 moderately
     - q2 fairly
     - q2 extremely
-
-- intent: q3_ans
+    - q2 skip
+- intent: Q3_ANS
   examples: |
     - q3 not at all
     - q3 slightly
     - q3 moderately
     - q3 fairly
     - q3 extremely
-  
-- intent: q4_ans
+    - q3 skip
+- intent: Q4_ANS
   examples: |
     - q4 not at all
     - q4 slightly
     - q4 moderately
     - q4 fairly
     - q4 extremely
-  
-- intent: q5_ans
+    - q4 skip
+- intent: Q5_ANS
   examples: |
     - q5 not at all
     - q5 slightly
     - q5 moderately
     - q5 fairly
     - q5 extremely
+    - q5 skip
   
 
-- intent: q6_ans
+- intent: Q6_ANS
   examples: |
     - q6 not at all
     - q6 slightly
     - q6 moderately
     - q6 fairly
     - q6 extremely
-  
+    - q6 skip
 
-- intent: q7_ans
+- intent: Q7_ANS
   examples: |
     - q7 not at all
     - q7 slightly
     - q7 moderately
     - q7 fairly
     - q7 extremely
-  
+    - q7 skip
 
-- intent: q8_ans
+- intent: Q8_ANS
   examples: |
     - q8 not at all
     - q8 slightly
     - q8 moderately
     - q8 fairly
     - q8 extremely
-  
+    - q8 skip
 
 
-- intent: q9_ans
+- intent: Q9_ANS
   examples: |
     - q9 not at all
     - q9 slightly
     - q9 moderately
     - q9 fairly
     - q9 extremely
-  
+    - q9 skip
 
 
-- intent: q10_ans
+- intent: Q10_ANS
   examples: |
     - q10 not at all
     - q10 slightly
     - q10 moderately
     - q10 fairly
     - q10 extremely
-  
+    - q10 skip
 
 
-- intent: q11_ans
+- intent: Q11_ANS
   examples: |
     - q11 not at all
     - q11 slightly
     - q11 moderately
     - q11 fairly
     - q11 extremely
-  
+    - q11 skip
 
 
-- intent: q12_ans
+- intent: Q12_ANS
   examples: |
     - q12 not at all
     - q12 slightly
     - q12 moderately
     - q12 fairly
     - q12 extremely
-  
+    - q12 skip
 
 
-- intent: q13_ans
+- intent: Q13_ANS
   examples: |
     - q13 not at all
     - q13 slightly
     - q13 moderately
     - q13 fairly
     - q13 extremely
-  
+    - q13 skip
 
 
-- intent: q14_ans
+- intent: Q14_ANS
   examples: |
     - q14 not at all
     - q14 slightly
     - q14 moderately
     - q14 fairly
     - q14 extremely
-  
+    - q14 skip
 
-- intent: continue_
-  examples: |
-    - continue
-- intent: stop_
-  examples: |
-    - stop
-  
 
-- intent: restore_
+
+- intent: RESTORE_
   examples: |
     - restore
 

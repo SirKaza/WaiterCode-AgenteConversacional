@@ -10,20 +10,21 @@ intents:
   - bot_challenge
   - interrupt
   # explain... all uppercase,
-  - q1_ans 
-  - q2_ans
-  - q3_ans
-  - q4_ans
-  - q5_ans
-  - q6_ans
-  - q7_ans
-  - q8_ans
-  - q9_ans
-  - q10_ans
-  - q11_ans
-  - q12_ans
-  - q13_ans
-  - q14_ans
+  # All the intents declared with UPPERCASE are those used to control the diaglog flow.
+  - Q1_ANS 
+  - Q2_ANS
+  - Q3_ANS
+  - Q4_ANS
+  - Q5_ANS
+  - Q6_ANS
+  - Q7_ANS
+  - Q8_ANS
+  - Q9_ANS
+  - Q10_ANS
+  - Q11_ANS
+  - Q12_ANS
+  - Q13_ANS
+  - Q14_ANS
   - continue_
   - stop_
 #slots:
@@ -50,14 +51,15 @@ intents:
 responses:
 
   utter_greet:
-  - text: "Hey! I am Rasa, a chatbot. We are having this conversation because we really want to know how our users feel about our game so that we can improve it."
+  - text: "Hey! I am Mayer, a chatbot. We are having this conversation because we really want to know how our users feel about our game so that we can improve it."
   utter_greet1:
-  - text: "We will only ask you few questions. Feel free to continue or stop, and you will get some reward. Will you help us, please? (please answer with 'continue' or 'stop')"
-  utter_greet2:
+  - text: "We will only ask you few questions. Feel free to stop when you are tired. Of course, if you help us then you will get some rewards."
+  utter_positive_reply:
   - text: "We are so happy to hear that!"
   - text: "That's wonderful!"
   - text: "Oh! I see."
-  utter_again:
+
+  utter_greet_again:
   - text: "Hey again! May we continue with the game exprience questionnaire, it means a lot to us. Of course! It's all voluntary, say continue to proceed or stop to refuse"
 
   utter_cheer_up:
@@ -77,7 +79,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_introduction:
-  - text: "Tell us how you feel about the following expression using: 'not at all', 'slightly', 'moderately', 'fairly' or 'extremely' (from 0 to 4). "
+  - text: "Tell us how you feel about the following expression using: 'not at all', 'slightly', 'moderately', 'fairly' , 'extremely' (from 0 to 4) or 'skip' if don't know what to say. "
   
   utter_start:
   - text: "Let's start with the first one."
@@ -132,6 +134,8 @@ responses:
   - text: "Thank you so much for answering all the questions!"
   - text: "Thank you so much for helping us improve! We really apreciate it!"
 
+
+#the session will expired and closed in 2 minutes of inactivity
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 2
   carry_over_slots_to_new_session: true
