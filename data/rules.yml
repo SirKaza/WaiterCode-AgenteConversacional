@@ -48,8 +48,7 @@ rules:
 - rule: user answer question 1 (intent), bot ask question 2 (action)
   steps:
     - intent: Q1_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q2
 - rule: when user willing to stop the conversation.
   steps:
@@ -59,85 +58,82 @@ rules:
 - rule: user answer question 2 (intent), bot ask question 3 (action)
   steps:
     - intent: Q2_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q3
 
 - rule: user answer question 3 (intent), bot ask question 4 (action)
   steps:
     - intent: Q3_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q4
 
 - rule: user answers question 4 (intent), bot asks question 5 (action)
   steps:
     - intent: Q4_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q5
 
 - rule: user answers question 5 (intent), bot asks question 6 (action)
   steps:
     - intent: Q5_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q6
 
 - rule: user answers question 6 (intent), bot asks question 7 (action)
   steps:
     - intent: Q6_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q7
 - rule: user answers question 7 (intent), bot asks question 8 (action)
   steps:
     - intent: Q7_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q8
 - rule: user answers question 8 (intent), bot asks question 9 (action)
   steps:
     - intent: Q8_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q9
 - rule: user answers question 9 (intent), bot asks question 10 (action)
   steps:
     - intent: Q9_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db
     - action: utter_q10
 - rule: user answers question 10 (intent), bot asks question 11 (action)
   steps:
     - intent: Q10_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db_two_digits
     - action: utter_q11
 - rule: user answers question 11 (intent), bot asks question 12 (action)
   steps:
     - intent: Q11_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db_two_digits
     - action: utter_q12
 - rule: user answers question 12 (intent), bot asks question 13 (action)
   steps:
     - intent: Q12_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db_two_digits
     - action: utter_q13
 - rule: user answers question 13 (intent), bot asks question 14 (action)
   steps:
     - intent: Q13_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
+    - action: action_db_two_digits
     - action: utter_q14
 - rule: user answers question 14 (intent), bot end the questionnaire (action)
   steps:
     - intent: Q14_ANS
-    - action: utter_positive_reply
-    - action: utter_introduction
-    - action: utter_end
+    - action: action_db_two_digits
+    - action: utter_lastquestion
+    - action: utter_q15
+- rule: user answers question 15 (intent), bot end the questionnaire (action)
+  steps:
+    - intent: Q15_ANS
+    - action: action_open_question
+
+- rule: user answers question 16 (intent), bot end the questionnaire (action)
+  steps:
+    - intent: Q16_ANS
+    - action: action_open_question
 
 
 

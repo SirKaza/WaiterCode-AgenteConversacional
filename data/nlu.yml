@@ -228,6 +228,12 @@ nlu:
     - q14 fairly
     - q14 extremely
     - q14 skip
+- intent: Q15_ANS
+  examples: |
+    - q15 q15 
+- intent: Q16_ANS
+  examples: |
+    - q16 q16 
 
 
 
