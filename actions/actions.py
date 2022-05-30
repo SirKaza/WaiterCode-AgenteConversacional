@@ -11,7 +11,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from database_connect import dataUp
+from utils.database_connect import dataUp
 
 class ActionDb(Action):
     def name(self) -> Text:
