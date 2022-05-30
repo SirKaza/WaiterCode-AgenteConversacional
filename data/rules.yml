@@ -136,9 +136,10 @@ rules:
     - action: action_open_question
 
 
-
-
-
+- rule: Ask the user to rephrase whenever trigger low NLU confidence message
+  steps:
+  - intent: nlu_fallback
+  - action: utter_rephrase
 
 
 

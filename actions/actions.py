@@ -116,3 +116,17 @@ class ActionTest(Action):
           dispatcher.utter_message(text="Hello World!")
           return []
 '''
+from datetime import datetime
+class ActionWhatTime(Action):
+
+      def name(self) -> Text:
+          return "action_what_time"
+ 
+      def run(self, dispatcher: CollectingDispatcher,
+              tracker: Tracker,
+              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+              #
+              now = datetime.now()
+              current_time = now.strftime("%H:%M:%S")
+              dispatcher.utter_message(text="Now is: "+current_time)
+              return []
