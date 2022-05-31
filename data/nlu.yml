@@ -99,7 +99,7 @@ nlu:
     - stop this conversation
     - want to finish
     - don't want to continue
-    - stop
+    - Stop.
 - intent: Q1_ANS
   examples: |
     - q1 not at all
@@ -241,6 +241,10 @@ nlu:
   examples: |
     - restore
 
+- intent: PAUSE_
+  examples: |
+    - pause
+    - pause the conversation
 
 
 

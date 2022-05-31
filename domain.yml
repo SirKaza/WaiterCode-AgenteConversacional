@@ -28,6 +28,8 @@ intents:
   - Q15_ANS
   - Q16_ANS
   - RESTORE_
+  - EXTERNAL_reminder
+  - PAUSE_
 #slots:
 #  q1:
  #   type: text
@@ -138,6 +140,8 @@ responses:
   - text: "Oh..I are so sorry to hear that. Thanks anyways, I'll see you later! Enjoy the game!"
   - text: "It's okay, I wish you the best luck! See you later!"
   - text: "Thanks a lot for helping us to keep improving the game! See you later!"
+  utter_pause:
+  - text: "There was no activity for a while so I guess you might want to take a break, I'll catch up with you later, bye. "
   utter_end:
   - text: "Thank you so much for answering all the questions!"
   utter_rephrase:
@@ -146,6 +150,9 @@ actions:
 - action_db
 - action_open_question
 - action_db_two_digits
+- action_react_to_reminder
+- action_schedule_reminder
+- action_forget_reminders
 #- action_test
 #- action_submit_suggestion_form
 

@@ -7,10 +7,7 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+
 
 - rule: first time bot appears
   steps:
@@ -135,16 +132,19 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_rephrase
+- rule: Rule that handle timeout condition
+  steps:
+  - intent: PAUSE_
+  - action: utter_pause
+#- rule: action_react_to_Reminder
+  #steps:
+ # - intent: EXTERNAL_reminder
+ # - action: action_react_to_reminder
 
+#- rule: action_react_to_Reminder
+ # steps:
+ #- intent: bot_challenge
+ # - action: action_forget_reminders
+ # - action: utter_goodbye
 
-
-#IN PROGRESS
-#skip this part, add more examples to continue_, combine with affirm, rules names..,timeout -> stop intent
-#+option to intent: dont know what to answer, skip this question, √
-#explain why use rules instead of stories.  √
-#find a ways to use slots instead of differents intents. TODO
-#empezar con la memoria,plataforma conversacionales. In progress
-#intro rasa. explicar nlu != nlg.  In progress
-#diagrama de flujo de maquina de estado.  In progress
-#diagrama de unity-rasa.  In progress
 

@@ -3,9 +3,10 @@ version: "3.1"
 stories:
 
 #- story: happy path
- # steps:
-  #- intent: mood_unhappy
-  #- action: utter_lastquestion
+#  steps:
+ # - intent: mood_unhappy
+ # - action: utter_happy
+ # - action: action_schedule_reminder
 
 #- story: sad path 1
  # steps:
