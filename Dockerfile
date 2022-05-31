@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir --upgrade pip
 
 RUN pip install rasa
 RUN pip install mysql-connector-python-rf
+RUN pip install pymongo
 ADD config.yml config.yml
 ADD domain.yml domain.yml
 ADD credentials.yml credentials.yml

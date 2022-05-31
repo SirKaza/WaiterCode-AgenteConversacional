@@ -14,7 +14,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import ReminderScheduled, ReminderCancelled
 #from utils.database_connect import dataUp
 #from ..utils.database_connect import dataUp
-from database_connect import dataUp
+#from utils.database_connect import dataUp
+from mongodatabase import dataUp
 class ActionDb(Action):
     def name(self) -> Text:
         return "action_db"
@@ -25,10 +26,7 @@ class ActionDb(Action):
             #intentname= tracker.latest_message['intent'].get('name')
             sender = tracker.sender_id
 
-            #dispatcher.utter_message(text="Hello World!")
-            #if (intentname == "q1"):
             realtext = usertext[3:]
-            #sql='INSERT INTO test.user (q1) VALUES ("{0}");'.format(realtext) 
             colum  = usertext[:2]
             dataUp(sender, realtext, colum)
             if ("not at all" in realtext or "slightly" in realtext or "moderately" in realtext):
@@ -76,9 +74,6 @@ class ActionOpenQuestion(Action):
                 colum  = usertext[:3]
                 dataUp(sender, realtext, colum)
                 dispatcher.utter_message(response="utter_end")
-                #dataUp(sender, "hello", "mood_great")
-                #dispatcher.utter_message(text="I felt challenged")
-                #dispatcher.utter_message(response=)
 '''
 class ActionHelloWorld(Action):
 
