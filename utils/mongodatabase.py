@@ -43,10 +43,3 @@ def dataUp(sender, message, column):
                 collection.update_one({"sender": "{}".format(sender)},
                                       {"$set": {"{}".format(column): "{}".format(final)}})
 
-
-
-
-
-
-
-dataUp("rassa","correct","q1")
