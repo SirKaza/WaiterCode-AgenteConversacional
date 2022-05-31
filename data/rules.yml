@@ -12,11 +12,6 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Say 'Thank you for listening, see you next time' anytime the user interrup
-  steps:
-  - intent: interrup
-  - action: utter_goodbye
-
 - rule: first time bot appears
   steps:
   - intent: greet
