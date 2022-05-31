@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import ReminderScheduled, ReminderCancelled
 #from utils.database_connect import dataUp
 #from ..utils.database_connect import dataUp
-from database_connect import dataUp
+from .database_connect import dataUp
 class ActionDb(Action):
     def name(self) -> Text:
         return "action_db"
