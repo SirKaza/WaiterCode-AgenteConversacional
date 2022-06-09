@@ -68,15 +68,16 @@ class ActionDb(Action):
             #intentname= tracker.latest_message['intent'].get('name')
             sender = tracker.sender_id
 
-            realtext = usertext[3:]
-            colum  = usertext[:2]
+            realtext = usertext[3:].lower()
+            colum  = usertext[:2].lower()
             dataUp(sender, realtext, colum)
             if ("not at all" in realtext or "slightly" in realtext or "moderately" in realtext):
                 dispatcher.utter_message(response="utter_negative_reply")
             
             if ("fairly" in realtext or "extremely" in realtext):
                 dispatcher.utter_message(response="utter_positive_reply")
-            
+            if ("skip" in realtext):
+                dispatcher.utter_message(response="utter_dont_worry")
             dispatcher.utter_message(response="utter_introduction")
 class ActionDbTwoDigits(Action):
     def name(self) -> Text:
@@ -86,14 +87,16 @@ class ActionDbTwoDigits(Action):
               domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             usertext = tracker.latest_message['text']
             sender = tracker.sender_id
-            realtext = usertext[4:]
-            colum  = usertext[:3]
+            realtext = usertext[4:].lower()
+            colum  = usertext[:3].lower()
             dataUp(sender, realtext, colum)
             if ("not at all" in realtext or "slightly" in realtext or "moderately" in realtext):
                 dispatcher.utter_message(response="utter_negative_reply")
             
             if ("fairly" in realtext or "extremely" in realtext):
                 dispatcher.utter_message(response="utter_positive_reply")
+            if ("skip" in realtext):
+                dispatcher.utter_message(response="utter_dont_worry")
             if (tracker.latest_message['intent'].get('name') != "Q14_ANS"):
                 dispatcher.utter_message(response="utter_introduction")
             
@@ -107,15 +110,16 @@ class ActionOpenQuestion(Action):
             intentname= tracker.latest_message['intent'].get('name')
             sender = tracker.sender_id
             if (intentname == "Q15_ANS"):
-                realtext = usertext[8:]
-                colum  = usertext[:3]
+                realtext = usertext[8:].lower()
+                colum  = usertext[:3].lower()
                 dataUp(sender, realtext, colum)
                 dispatcher.utter_message(response="utter_q16")
             if (intentname == "Q16_ANS"):
-                realtext = usertext[8:]
-                colum  = usertext[:3]
+                realtext = usertext[8:].lower()
+                colum  = usertext[:3].lower()
                 dataUp(sender, realtext, colum)
                 dispatcher.utter_message(response="utter_end")
+
 '''
 class ActionHelloWorld(Action):
 
