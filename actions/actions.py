@@ -68,7 +68,7 @@ class ActionDb(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        usertext = tracker.latest_message['text']
+        usertext = tracker.latest_message['text'].lower()
         # intentname= tracker.latest_message['intent'].get('name')
         sender = tracker.sender_id
 
@@ -80,7 +80,8 @@ class ActionDb(Action):
 
         if ("fairly" in realtext or "extremely" in realtext):
             dispatcher.utter_message(response="utter_positive_reply")
-
+        if ("skip" in realtext):
+            dispatcher.utter_message(response="utter_dont_worry")
         dispatcher.utter_message(response="utter_introduction")
 
 
@@ -91,7 +92,7 @@ class ActionDbTwoDigits(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        usertext = tracker.latest_message['text']
+        usertext = tracker.latest_message['text'].lower()
         sender = tracker.sender_id
         realtext = usertext[4:]
         colum = usertext[:3]
@@ -101,6 +102,8 @@ class ActionDbTwoDigits(Action):
 
         if ("fairly" in realtext or "extremely" in realtext):
             dispatcher.utter_message(response="utter_positive_reply")
+        if ("skip" in realtext):
+            dispatcher.utter_message(response="utter_dont_worry")
         if (tracker.latest_message['intent'].get('name') != "Q14_ANS"):
             dispatcher.utter_message(response="utter_introduction")
 
@@ -112,7 +115,7 @@ class ActionOpenQuestion(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        usertext = tracker.latest_message['text']
+        usertext = tracker.latest_message['text'].lower()
         intentname = tracker.latest_message['intent'].get('name')
         sender = tracker.sender_id
         if (intentname == "Q15_ANS"):
