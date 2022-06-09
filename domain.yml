@@ -7,8 +7,11 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
+  - bot_challenge
   - interrupt
-  - Q1_ANS 
+  # explain... all uppercase,
+  # All the intents declared with UPPERCASE are those used to control the diaglog flow.
+  - Q1_ANS
   - Q2_ANS
   - Q3_ANS
   - Q4_ANS
@@ -27,7 +30,26 @@ intents:
   - RESTORE_
   - EXTERNAL_reminder
   - PAUSE_
-  
+#slots:
+#  q1:
+ #   type: text
+#    auto_fill: False
+ # q2:
+ #   type: text
+ #   auto_fill: False
+ # q3:
+  #q4:
+  #q5:
+ # q6:
+ # q7:
+ # q8:
+ # q9:
+ # q10:
+ # q11:
+ # q12:
+ # q13:
+  #q14:
+
 
 responses:
   utter_cheer_up:
@@ -43,9 +65,9 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_greet:
-  - text: "Hey! I am Mayer, a chatbot. Can you answer few questions to help us improve our game? "
+  - text: "Hey! I am Mayer, a chatbot. It's questionnaire time! No players can avoid this! I'll ask as fast as posible!"
   utter_greet1:
-  - text: "Feel free to take a break if you are tired by saying 'pause'. Of course, if you help us, later you will get some rewards."
+  - text: "Feel free to stop when you are tired. Of course, if you help us, later you will get some rewards."
   utter_positive_reply:
   - text: "I are so happy to hear that!"
   - text: "That's wonderful!"
@@ -54,19 +76,18 @@ responses:
   - text: "I'm sorry that you feel that way..."
   - text: "Seems like I still have much to improve."
   utter_greet_again:
-  - text: "Hey again! May I continue with the game exprience questionnaire, it means a lot to us."
-  utter_dont_worry:
-  - text: "Oh, it's okay, don't worry."
- 
+  - text: "Hey again! May I continue with the game exprience questionnaire, it means a lot to us. Of course! It's all voluntary, say continue to proceed or stop to refuse"
+
+
 
   utter_introduction:
-  - text: "Tell me how you feel about the following expression using: 'not at all', 'slightly', 'moderately', 'fairly' , 'extremely' (from 0 to 4) or 'skip' if don't know what to say. "
-  
+  - text: "Tell us how you feel about the following expression using: 'not at all', 'slightly', 'moderately', 'fairly' , 'extremely' (from 0 to 4) or 'skip' if don't know what to say. "
+
   utter_start:
-  - text: "Let's start with the first one:"
+  - text: "Let's start with the first one."
 
   utter_q1:
-  - text: "**I found it impressive**"
+  - text: "I found it impressive"
 
   utter_q2:
   - text: "I felt challenged"
@@ -110,10 +131,10 @@ responses:
   utter_lastquestion:
   - text: "I'm apreciate you answer all of them. I have last two open questions, and this time please answer with your own word!"
   utter_q15:
-  - text: "Tell me what part of the game you liked most and what part of the game you dislike most."
+  - text: "Tell us what part of the game you liked most and what part of the game you dislike most."
 
   utter_q16:
-  - text: "What about changes, in your opinion, that may improve this game. Tell me about it."
+  - text: "What about changes, in your opinion, that may improve this game. Tell us about it."
 
   utter_sorrytohear:
   - text: "Oh..I are so sorry to hear that. Thanks anyways, I'll see you later! Enjoy the game!"
@@ -124,7 +145,7 @@ responses:
   utter_end:
   - text: "Thank you so much for answering all the questions!"
   utter_rephrase:
-  - text: "I'm sorry, I couldn't understand that. Could you rephrase?"
+  - text: I'm sorry, I couldn't understand that. Could you rephrase?
 actions:
 - action_db
 - action_open_question
@@ -136,7 +157,7 @@ actions:
 #- action_submit_suggestion_form
 
 
-        
+
 #the session will expired and closed in 2 minutes of inactivity
 session_config:
   session_expiration_time: 2
