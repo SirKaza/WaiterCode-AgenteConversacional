@@ -52,6 +52,11 @@ rules:
     - action: action_db
     - action: utter_q5
 
+- rule: this rule is used to test out programs
+  steps:
+  - intent: mood_unhappy
+  - action: utter_introduction
+  - action: utter_q1
 - rule: user answers question 5 (intent), bot asks question 6 (action)
   steps:
     - intent: Q5_ANS
