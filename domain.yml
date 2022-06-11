@@ -34,7 +34,7 @@ responses:
   utter_greet1:
   - text: "Feel free to take a break if you are tired by saying 'pause'. Of course, if you help us, later you will get some rewards."
   utter_positive_reply:
-  - text: "I are so happy to hear that!"
+  - text: "I am so happy to hear that!"
   - text: "That's wonderful!"
   - text: "Glad you feel that way."
   utter_negative_reply:
@@ -103,7 +103,7 @@ responses:
   - text: "Q16. What about changes, in your opinion, that may improve this game. Tell me about it."
 
   utter_sorrytohear:
-  - text: "Oh..I are so sorry to hear that. Thanks anyways, I'll see you later! Enjoy the game!"
+  - text: "Oh..I am so sorry to hear that. Thanks anyways, I'll see you later! Enjoy the game!"
   - text: "It's okay, I wish you the best luck! See you later!"
   - text: "Thanks a lot for helping us to keep improving the game! See you later!"
   utter_pause:
