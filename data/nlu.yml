@@ -66,7 +66,7 @@ nlu:
     - I don't feel very well
     - I am disappointed
 
-
+#This intent is used when the user wants to take a break
 - intent: interrupt
   examples: |
     - quit
@@ -77,6 +77,7 @@ nlu:
     - stop.
     - pause the conversation
     - pause
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q1_ANS
   examples: |
     - q1 not at all
@@ -85,6 +86,7 @@ nlu:
     - q1 fairly
     - q1 extremely
     - q1 skip
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q2_ANS
   examples: |
     - q2 not at all
@@ -93,6 +95,7 @@ nlu:
     - q2 fairly
     - q2 extremely
     - q2 skip
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q3_ANS
   examples: |
     - q3 not at all
@@ -101,6 +104,7 @@ nlu:
     - q3 fairly
     - q3 extremely
     - q3 skip
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q4_ANS
   examples: |
     - q4 not at all
@@ -109,6 +113,7 @@ nlu:
     - q4 fairly
     - q4 extremely
     - q4 skip
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q5_ANS
   examples: |
     - q5 not at all
@@ -118,7 +123,7 @@ nlu:
     - q5 extremely
     - q5 skip
   
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q6_ANS
   examples: |
     - q6 not at all
@@ -127,7 +132,7 @@ nlu:
     - q6 fairly
     - q6 extremely
     - q6 skip
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q7_ANS
   examples: |
     - q7 not at all
@@ -136,7 +141,7 @@ nlu:
     - q7 fairly
     - q7 extremely
     - q7 skip
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q8_ANS
   examples: |
     - q8 not at all
@@ -146,7 +151,7 @@ nlu:
     - q8 extremely
     - q8 skip
 
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q9_ANS
   examples: |
     - q9 not at all
@@ -156,7 +161,7 @@ nlu:
     - q9 extremely
     - q9 skip
 
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q10_ANS
   examples: |
     - q10 not at all
@@ -166,7 +171,7 @@ nlu:
     - q10 extremely
     - q10 skip
 
-
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q11_ANS
   examples: |
     - q11 not at all
@@ -175,7 +180,7 @@ nlu:
     - q11 fairly
     - q11 extremely
     - q11 skip
-
+#This intent is associated with the UX responses defined in GEQ
 
 - intent: Q12_ANS
   examples: |
@@ -185,7 +190,7 @@ nlu:
     - q12 fairly
     - q12 extremely
     - q12 skip
-
+#This intent is associated with the UX responses defined in GEQ
 
 - intent: Q13_ANS
   examples: |
@@ -195,7 +200,7 @@ nlu:
     - q13 fairly
     - q13 extremely
     - q13 skip
-
+#This intent is associated with the UX responses defined in GEQ
 
 - intent: Q14_ANS
   examples: |
@@ -205,19 +210,21 @@ nlu:
     - q14 fairly
     - q14 extremely
     - q14 skip
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q15_ANS
   examples: |
-    - q15 q15 
+    - q15 q15
+#This intent is associated with the UX responses defined in GEQ
 - intent: Q16_ANS
   examples: |
     - q16 q16 
 
 
-
+#This is an internal intent that is used to wake up the chatbot
 - intent: RESTORE_
   examples: |
     - restore
-
+#This is an internal intent that is used to handle timeout situation
 - intent: PAUSE_
   examples: |
     - timeout timeout

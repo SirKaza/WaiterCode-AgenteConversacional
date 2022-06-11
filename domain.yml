@@ -118,8 +118,6 @@ actions:
 - action_db
 - action_open_question
 - action_what_time
-#- action_test
-#- action_submit_suggestion_form
 
 
 
