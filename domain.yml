@@ -8,8 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - interrupt
-  # explain... all uppercase,
-  # All the intents declared with UPPERCASE are those used to control the diaglog flow.
   - Q1_ANS
   - Q2_ANS
   - Q3_ANS
@@ -27,23 +25,10 @@ intents:
   - Q15_ANS
   - Q16_ANS
   - RESTORE_
-  - EXTERNAL_reminder
   - PAUSE_
 
 
 responses:
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-  utter_did_that_help:
-  - text: "Did that help you?"
-  utter_happy:
-  - text: "Great, carry on!"
-  utter_goodbye:
-  - text: "Thank you for listening, see you next time"
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
   utter_greet:
   - text:  "Hey! I am Mayer, a chatbot. Can you answer few questions to help us improve our game? "
   utter_greet1:
@@ -68,10 +53,10 @@ responses:
   - text: "Let's start with the first one:"
 
   utter_q1:
-  - text: "Q1. **I found it impressive**"
+  - text: "Q1. I found it impressive"
 
   utter_q2:
-  - text: "Q2. I felt challenged**"
+  - text: "Q2. I felt challenged"
 
   utter_q3:
   - text: "Q3. I felt good"
@@ -110,7 +95,7 @@ responses:
   - text: "Q14. I was interested in the game's story"
 
   utter_lastquestion:
-  - text: "I'm apreciate you answer all of them. I have last two open questions, and this time please answer with your own word!"
+  - text: "I appreciate you answer all of them. I have last two open questions, and this time please answer with your own word!"
   utter_q15:
   - text: "Q15. Tell us what part of the game you liked most and what part of the game you dislike most."
 
@@ -127,13 +112,12 @@ responses:
   - text: "Thank you so much for answering all the questions!"
   utter_rephrase:
   - text: "I'm sorry, I couldn't understand that. Could you rephrase?"
+  utter_goodbye:
+  - text: "Thank you for listening, see you next time"
 actions:
 - action_db
 - action_open_question
-- action_db_two_digits
-- action_react_to_reminder
-- action_schedule_reminder
-- action_forget_reminders
+- action_what_time
 #- action_test
 #- action_submit_suggestion_form
 

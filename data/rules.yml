@@ -42,7 +42,7 @@ rules:
     - intent: Q1_ANS
     - action: action_db
     - action: utter_q2
-- rule: when user willing to stop the conversation.
+- rule: user willing to pause the conversation, bot express its feeling.
   steps:
     - intent: interrupt
     - action: utter_sorrytohear
@@ -132,7 +132,7 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_rephrase
-- rule: Rule that handle timeout condition
+- rule: Rule that handles timeout condition
   steps:
   - intent: PAUSE_
   - action: utter_pause
