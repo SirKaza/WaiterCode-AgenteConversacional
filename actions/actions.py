@@ -18,7 +18,8 @@ from rasa_sdk.events import ReminderScheduled, ReminderCancelled
 import pymongo
 from pymongo import MongoClient
 twoDigits = ["Q10_ANS", "Q11_ANS", "Q12_ANS", "Q13_ANS", "Q14_ANS", "Q15_ANS", "Q16_ANS"]
-cluster = MongoClient("mongodb+srv://root:root@clustertfg.9afluby.mongodb.net/?retryWrites=true&w=majority")
+#cluster = MongoClient("mongodb+srv://root:root@clustertfg.9afluby.mongodb.net/?retryWrites=true&w=majority") #anterior tfg
+cluster = MongoClient("mongodb+srv://marccasanova:rNDivjwxbCn8cU5F@cluster0.gi4mjq0.mongodb.net/?retryWrites=true&w=majority")
 db = cluster["rasa"]
 collection = db["test"]
 #This function stores user's answers into the database
