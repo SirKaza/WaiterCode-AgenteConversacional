@@ -12,9 +12,10 @@
 
 action_endpoint:
   #url: "http://localhost:5005/webhook"
-  #url: "http://localhost:5055/webhook" #this works local
+  url: "http://localhost:5055/webhook" #this works local
   #url: "https://rasa-actions-server-parasolw.cloud.okteto.net/webhook" not work
-  url: "https://rasa-actions-server-parasolw.cloud.okteto.net/webhook"   #for okteto
+  #url: "https://rasa-actions-server-parasolw.cloud.okteto.net"   #for okteto
+  #url: "https://rasa-actions-server-sirkaza.cloud.okteto.net/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
